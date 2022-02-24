@@ -46,17 +46,13 @@
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
 
     background: var(--bg);
 
     overflow-x: hidden;
 }
-
-
-
-
 
 
 nav {
@@ -164,7 +160,6 @@ nav a {
     top: 50px;
 }
 
-#imgProject {}
 
 #imgProject2 {
     top: 50vh;

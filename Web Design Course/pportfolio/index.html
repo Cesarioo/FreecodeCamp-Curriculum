@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="my-scrollbar">
 
     <nav id="navbar">
         <div class="links">
@@ -133,6 +133,36 @@
         <h2> My GitHub profile</h2>
         <a href="https://github.com/Cesarioo/" target="_blank" id="profile-link"> <img src="github.svg" alt=""></a>
     </section>
+
+
+
+    <script src="node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+
+    <script>
+        var Scrollbar = window.Scrollbar;
+
+        Scrollbar.init(document.querySelector('#my-scrollbar'));
+    </script>
+
+
+    <script>
+
+        let nav = document.getElementById('navbar')
+
+        var scrollbar = Scrollbar.init(
+            document.getElementById('my-scrollbar'),
+        );
+
+        scrollbar.addListener(({ offset }) => {
+            nav.style.top = offset.y + 'px';
+            nav.style.left = offset.x + 'px';
+            image1.style.top = offset.y * 0.9 + 'px'
+            image2.style.left = offset.y * 0.1 + 'px'
+            image3.style.right = offset.y * 0.1 + 'px'
+
+        });
+
+    </script>
     <script>
 
         let image1 = document.getElementById('imgWelcome')
@@ -147,6 +177,8 @@
             image3.style.right = value * 0.1 + 'px'
 
         })
+
+
     </script>
 </body>
 
