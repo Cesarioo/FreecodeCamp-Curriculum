@@ -145,6 +145,20 @@ nav a {
     height: 100vh;
 }
 
+.projectRow {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projectRow>* {
+    margin: 1em;
+
+}
 
 .project-tile {
     background: var(--grad-pink-shade);
