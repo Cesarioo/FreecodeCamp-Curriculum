@@ -78,13 +78,35 @@ nav {
 
 }
 
+nav h1 {
+    font-family: var(--main-font);
+    line-height: 22px;
+}
+
 nav a {
-    margin: 0 2em;
+    margin: 0 1em;
     color: var(--sub-color);
+    font-size: 0.8em;
+    font-family: var(--sub-font);
 }
 
 
+@media screen and (max-width: 720px) {
+    nav a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 0.3em;
+    }
 
+    nav {
+        padding: 0 1em;
+    }
+
+    nav h1 {
+        text-align: center;
+    }
+}
 
 
 
@@ -267,4 +289,15 @@ nav a {
     position: relative;
     z-index: 55;
     color: white;
+}
+
+@media screen and (max-width: 500px) {
+
+    #media {
+        flex-direction: column;
+    }
+
+    #media #media-bg {
+        bottom: -30px;
+    }
 }
