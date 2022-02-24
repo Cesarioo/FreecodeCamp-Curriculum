@@ -8,6 +8,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -178,12 +179,37 @@ nav a {
     height: auto;
     width: 100%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+
 }
+
+.p5 {
+    grid-column: 1/3;
+}
+
+@media screen and (max-width: 720px) {
+    .projectRow {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+    }
+
+    .p5 {
+        grid-column: auto;
+    }
+
+
+    #imgProject2 {
+        top: 100vh;
+    }
+
+}
+
+
 
 .projectRow>* {
     margin: 2em 1em;
