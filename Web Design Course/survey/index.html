@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="header" class="padding">
+        <h1 id="title">
+            Thank you for taking part in this Survey form.
+        </h1>
+        <p id="description">
+            This form is going to ensure that your are
+            the right person for me. I need someone to love and so do
+            you apparently... <br>Now lets see our compatibility
+        </p>
+
+    </div>
+    <div id="main" class="padding">
+        <form id="survey-form">
+            <div class="form-section">
+                <label id="name-label" for="name"> Enter your Name here</label>
+                <input required id="name" placeholder="name" type="text">
+            </div>
+            <div class="form-section">
+                <label id="email-label"> Enter your email here</label>
+                <input required id="email" placeholder="email" type="email">
+            </div>
+            <div class="form-section">
+                <label id="number-label"> Select your age</label>
+                <input min="10" max="19" id="number" placeholder="number" type="number">
+            </div>
+            <div class="form-section">
+                <label for="role"> What is your income ?</label>
+                <label class="radio-desc">
+                    <input name="role" type="radio" value="1"> less than 10k/month
+                </label>
+                <label class="radio-desc">
+                    <input name="role" type="radio" value="2"> less than 20k/month
+                </label>
+                <label class="radio-desc">
+                    <input name="role" type="radio" value="3"> less than 30k month
+                </label>
+                <label class="radio-desc">
+                    <input name="role" type="radio" value="4"> more than 50k month
+                </label>
+            </div>
+            <div class="form-section">
+                <label for="checkbox"> Do you love me already ?</label>
+                <label class="radio-desc">
+                    <input type="checkbox" value="1"> Yes !!
+                </label>
+            </div>
+            <div class="form-section">
+                <label for="dog-names"> Favorite dog breed</label>
+                <select name="dog-names" id="dropdown">
+                    <option value="Golden"> Golden</option>
+                    <option value="Abra">Abra</option>
+                    <option value="Pointer">Pointer</option>
+                    <option value="Chihuaha">Chihuaha</option>
+                </select>
+            </div>
+            <div class="form-section">
+                <label for="text"> Say something meaningfull</label>
+                <textarea id="text"> x</textarea>
+            </div>
+            <button id="submit"> SEND IT </button>
+        </form>
+    </div>
+</body>
+
+</html>

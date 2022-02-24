@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="hsl(25, 21%, 53%)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="coffe2.png">
+    <title>Coffee for life</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <a href="#header" class="nav-link"> Top of Page </a>
+        <a href="#showcase" class="nav-link"> Video Showcase</a>
+        <a href="#form" class="nav-link"> @mail list</a>
+    </nav>
+    <header id="header">
+
+        <div class="title">
+            <h1>
+                <span>
+                    Welcome
+                </span>
+                <br> to the new era of coffee
+            </h1>
+            <img src="https://s1.qwant.com/thumbr/0x380/0/4/4063afa86168584b46449c1fa0440907752e260170d561f2c7d132c84417eb/awesome-coffee-wallpaper.jpg?u=http%3A%2F%2Fwww.hdwallpaperspulse.com%2Fwp-content%2Fuploads%2F2017%2F09%2F22%2Fawesome-coffee-wallpaper.jpg&q=0&b=1&p=0&a=0"
+                alt="a nice coffee image" id="header-img">
+        </div>
+    </header>
+    <main>
+        <div class="showcase" id="showcase">
+            <h2>
+                <span>
+                    Curious?
+                </span> <br>This is how our coffee is made.
+            </h2>
+            <video id="video-player" autoplay muted loop>
+                <source
+                    src="https://player.vimeo.com/external/356200258.sd.mp4?s=ebd6d6f9946147c4d0ffd960a16489e91cf54f7e&profile_id=139&oauth2_token_id=57447761">
+                <source />
+            </video>
+        </div>
+        <div class="cards padding">
+            <div class="card-container card-one">
+                <div class="card-text">
+                    <h2> <span>Simple </span> coffee</h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt veritatis eligendi est
+                        quas, nihil culpa natus illo aspernatur aliquam illum qui, saepe consequatur beatae. Ab sit
+                        voluptatibus in odio.
+                    </p>
+                </div>
+                <div class="card-button">
+                    <button> Buy now - 3.99$ </button>
+                </div>
+            </div>
+            <div class=" card-container card-two">
+
+                <div class="card-text">
+                    <h2> <span>Nice </span> coffee</h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt veritatis eligendi est
+                        quas, nihil culpa natus illo aspernatur aliquam illum qui, saepe consequatur beatae. Ab sit
+                        voluptatibus in odio.
+                    </p>
+                </div>
+                <div class="card-button">
+                    <button> Buy now - 4.99$ </button>
+                </div>
+
+            </div>
+            <div class="card-container card-tree">
+
+                <div class="card-text">
+                    <h2> <span>Excellent </span> coffee</h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt veritatis eligendi est
+                        quas, nihil culpa natus illo aspernatur aliquam illum qui, saepe consequatur beatae. Ab sit
+                        voluptatibus in odio.
+                    </p>
+                </div>
+                <div class="card-button">
+                    <button> Buy now - 6.99$ </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <h3> By providing us your email, you want to be on
+            the top list to receive our coffee.
+        </h3>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+
+            <input type="email" name="email" placeholder="email address" id="email">
+            <input type="submit" id="submit">
+        </form>
+    </footer>
+
+    <script>
+        let coffee = document.getElementById('header-img')
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            coffee.style.borderRadius = value + 'px';
+            coffee.style.bottom = value * 0.8 + 'px';
+        })
+    </script>
+</body>
+
+
+
+</html>

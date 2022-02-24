@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: hsl(38, 38%, 86%);
+
+}
+
+.padding {
+    padding: 4em;
+}
+
+span {
+    color: hsl(25, 70%, 20%, 1)
+}
+
+#nav-bar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    align-items: center;
+    padding: 1em;
+    background: hsl(25, 21%, 53%);
+    border-bottom: hsl(25, 33%, 23%) solid 3px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    max-height: 6em;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: hsl(29, 24%, 17%);
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+    position: relative;
+}
+
+#nav-bar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(10, 100%, 20%, 1), hsl(25, 100%, 50%, 1));
+    bottom: -2px;
+    left: 0;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+#nav-bar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+}
+
+.title h1 {
+    padding: 0em 2em;
+    margin-bottom: 0em;
+}
+
+.title img {
+    width: 100%;
+    max-width: 45em;
+    padding: 1em 1em 4em 1em;
+    border-radius: 40px;
+}
+
+#header-img {
+    position: relative;
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.showcase video {
+    padding: 1em;
+    border-radius: 20px;
+    max-height: 28em;
+
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    min-height: 15em;
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    border-top: hsl(0, 100%, 100%, 1) 2px solid;
+    border-bottom: hsl(0, 100%, 100%, 0.5) 2px solid;
+    border-right: 2px solid hsl(0, 100%, 100%, 0.3);
+    border-radius: 20px;
+    margin-bottom: 2em;
+    background: hsl(0, 100%, 100%, 0.1);
+}
+
+
+.card-container h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.card-container p {
+    font-size: 1em;
+}
+
+.card-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.card-container button {
+    padding: 0.3em;
+    width: 10em;
+    height: 3em;
+
+    background: hsl(0, 100%, 100%, 0.1);
+
+    border-radius: 10px;
+    border: none;
+    border-top: hsl(0, 100%, 100%, 0.1) 2px solid;
+    border-bottom: hsl(0, 100%, 100%, 0.5) 2px solid;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+#footer {
+    background: hsl(25, 21%, 53%);
+
+
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    text-align: center;
+}
+
+#footer h3 {
+    margin-bottom: 0.5em;
+}
+
+
+
+#submit,
+input {
+    outline: none;
+    padding: 0.3em;
+
+    background: hsl(0, 100%, 100%, 0.4);
+
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 600px) {
+    #nav-bar {
+        margin-bottom: 0em;
+        flex-direction: row;
+    }
+
+    .title {
+        padding: 2em 2em 0em 2em;
+    }
+}
+
+@media screen and (min-width: 820px) {
+
+    .title {
+        height: 100vh;
+    }
+
+    .title h1 {
+        margin-bottom: 0.5em;
+    }
+
+    .cards {
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        height: 30em;
+        justify-content: space-around;
+    }
+
+    .card-container {
+        width: 30%;
+        height: 21em;
+    }
+
+}
+
+@media screen and (min-width: 1040px) {
+
+
+
+    .showcase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showcase video {
+        width: 80%;
+    }
+
+    .title img {
+        width: 80%;
+    }
+
+    .cards {
+        height: 28em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+}

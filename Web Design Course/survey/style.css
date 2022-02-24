@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.padding {
+    padding: 3em;
+}
+
+body {
+    /* background: hsl(260, 40%, 70%); */
+    background-image: url(image.jpg);
+    background-repeat: repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#header {
+    background: linear-gradient(180deg, hsl(260, 70%, 70%, 1) 20%, hsl(260, 70%, 70%, 0));
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#description {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+#survey-form {
+    border: 1px solid black;
+    background: hsl(260, 70%, 75%, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 3em;
+    align-items: center;
+    max-width: 50em;
+    width: 90%;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    align-items: center;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    height: 2em;
+    width: 90%;
+    max-width: 25em;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    border: none;
+    padding-left: 10px;
+
+    background: hsl(250, 100%, 90%, 0.5);
+}
+
+
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    outline: none;
+}
+
+label {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.radio-desc {
+    font-size: 1em;
+    line-height: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.radio-desc input {
+    margin-right: 0.5em;
+    width: 2em;
+    height: 1.5em;
+}
+
+
+button {
+    width: 8em;
+    height: 3em;
+    border-radius: 20px;
+    border: none;
+    animation: background 5s infinite;
+
+}
+
+.option {
+    height: 10em;
+}
+
+@keyframes background {
+    0% {
+        background: hsl(260, 40%, 70%);
+    }
+
+    50% {
+        background: hsl(260, 40%, 90%);
+    }
+
+    100% {
+        background: hsl(260, 40%, 70%);
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* .form-section input,
+.form-section select,
+.form-section textarea {
+    width: 10em;
+} */
+}
+
+.radio-desc input {
+    margin-right: 0.5em;
+    width: 2em;
+    height: 1.5em;
+}

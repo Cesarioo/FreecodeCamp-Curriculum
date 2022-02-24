@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --padding-nav: 8em;
+    --animation-time: 10s;
+    --animation-body: 15s;
+    --bg-body: hsl(233, 54%, 75%);
+    --blue-300: hsla(233, 90%, 70%, 1);
+    --blue-500: hsla(233, 40%, 50%, 1);
+    --blue-600: hsla(233, 40%, 40%, 1);
+    --blue-700: hsla(233, 70%, 30%, 1);
+    --blue-800: hsla(233, 70%, 20%, 1);
+    --prpl-500: rgb(81, 34, 190);
+    --grey-100: hsla(0, 0%, 90%);
+    --font-main: 'Bodoni Moda', serif;
+    --font-sub: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--blue-500));
+    border-radius: 6px;
+    transition: 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--blue-300));
+}
+
+body {
+    background: var(--bg-body);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: animBody var(--animation-body) linear;
+    overflow: visible;
+}
+
+@keyframes animBod {
+    0% {
+        height: 100vh;
+        overflow: hidden;
+        padding-right: 10px;
+    }
+
+    99% {
+        height: 100vh;
+        padding-right: 10px;
+
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+nav {
+    position: fixed;
+    padding-top: 1em;
+    background: linear-gradient(90deg, hsl(233, 70%, 70%), var(--bg-body));
+    height: 100%;
+    width: var(--padding-nav);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+nav header {
+    position: absolute;
+    top: 10px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: var(--font-sub);
+    font-weight: 600;
+    background: linear-gradient(to right, #f32170, #ff6b08 10%,
+            #cf23cf, #eedd44);
+    background-clip: border-box;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.links {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+}
+
+nav a {
+    width: 100%;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-top: 6em;
+}
+
+nav a p {
+    color: var(--prpl-500);
+    font-size: 1.2em;
+    font-family: var(--font-sub);
+    font-weight: 500;
+}
+
+#main-doc {
+    width: 100%;
+    height: 100%;
+    padding-left: calc(var(--padding-nav) + 1em);
+}
+
+
+.home {
+    height: 100vh;
+}
+
+.home li {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 500px) {
+    main h1 {
+        animation: colorh1 var(--animation-time);
+        width: 100%;
+        position: relative;
+        background: linear-gradient(to right, #f32170, #ff6b08,
+                #cf23cf, #eedd44);
+        background-clip: border-box;
+
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        font-family: var(--font-main);
+        font-weight: 900;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes colorh1 {
+    0% {
+        width: 0;
+        color: white;
+    }
+
+    25% {
+        color: blue;
+    }
+
+    50% {
+        color: white;
+    }
+
+    99% {}
+
+    100% {
+        width: 100%;
+    }
+}
+
+main h1::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    background: linear-gradient(to right, #f32170, #ff6b08,
+            #cf23cf, #eedd44);
+    width: 8em;
+    transform-origin: right;
+    height: 1px;
+    transform: scaleX(0);
+    animation: animationBefore ease-out infinite var(--animation-time);
+}
+
+@keyframes animationBefore {
+    0% {}
+
+    50% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    75% {
+        transform: scaleX(1);
+        transform-origin: left;
+
+    }
+
+    76% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+
+    100% {
+        transform: scaleX(0);
+
+    }
+
+}
+
+
+section {
+    padding: 2em;
+}
+
+section header {
+    all: unset;
+    font-size: 1.5em;
+    color: var(--prpl-500);
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+section p {
+    margin-top: 0.2em;
+    font-family: var(--font-sub);
+    font-weight: 400;
+    font-size: 1em;
+}
+
+code li {
+    background-color: var(--blue-600);
+    color: var(--grey-100);
+    font-weight: 600;
+    font-size: var(--font-sub);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+}
+
+h2 {
+    color: red;
+}
+
+@media (max-width: 500px) {
+
+
+    nav {
+        width: var(--padding-nav);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 7em;
+
+        background: linear-gradient(180deg, hsla(233, 70%, 70%, 1) 80%, var(--bg-body));
+        z-index: 999;
+    }
+
+    #main-doc {
+        width: 100%;
+        height: 100%;
+        padding-left: 1em
+    }
+
+    nav header {
+        position: relative;
+        top: 0;
+        margin-bottom: 0;
+
+    }
+
+    .links {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav a {
+        margin-top: 0;
+    }
+
+    nav a p {
+        color: var(--prpl-500);
+        font-size: 0.8em;
+        font-family: var(--font-sub);
+        font-weight: 500;
+    }
+
+    h1 {
+        animation: colorh1 var(--animation-time);
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font-sub);
+        font-weight: 900;
+        transform: scaleX(1);
+        transform-origin: left;
+        color: var(--blue-800);
+    }
+
+
+    @keyframes colorh1 {
+        0% {
+            transform: scaleX(0);
+        }
+
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+
+
+
+}
