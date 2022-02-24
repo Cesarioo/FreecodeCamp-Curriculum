@@ -133,9 +133,14 @@
     </section>
     <script>
 
+        let image1 = document.getElementById('imgWelcome')
+        let image2 = document.getElementById('imgProject')
+
         window.addEventListener('scroll', function () {
             let value = scrollY
 
+            image1.style.top = value * 0.7 + 'px'
+            image2.style.top = value * 0.75 + 'px'
         })
     </script>
 </body>
