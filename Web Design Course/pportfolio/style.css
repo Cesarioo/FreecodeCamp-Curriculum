@@ -13,10 +13,9 @@
 :root {
     --bg: rgb(0, 0, 0);
     --bg-nav: linear-gradient(90deg, #ff35ff, #5fedff);
-
-    --main-color: hsl(0, 0%, 100%);
-    --sub-color: hsl(0, 0%, 100%);
-    --third-color: hsl(0, 0%, 100%);
+    --main-color: hsl(303, 85%, 79%);
+    --sub-color: hsl(177, 85%, 82%);
+    --third-color: hsl(249, 100%, 49%);
     --grad-pink: #ff35ff;
     --grad-blue: #5fedff;
     --grad-blue-shade: hsla(187, 92%, 43%, 0.9);
@@ -81,6 +80,7 @@ nav {
 nav h1 {
     font-family: var(--main-font);
     line-height: 22px;
+    color: var(--main-color);
 }
 
 nav a {
