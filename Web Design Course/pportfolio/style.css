@@ -16,11 +16,11 @@
 
     --main-color: hsl(0, 0%, 100%);
     --sub-color: hsl(0, 0%, 100%);
-
+    --third-color: hsl(0, 0%, 100%);
     --grad-pink: #ff35ff;
     --grad-blue: #5fedff;
-    --grad-blue-shade: hsla(187, 95%, 61%, 0.9);
-    --grad-pink-shade: hsla(295, 82%, 51%, 0.9);
+    --grad-blue-shade: hsla(187, 92%, 43%, 0.9);
+    --grad-pink-shade: hsla(242, 83%, 84%, 0.9);
 
 
 
@@ -142,7 +142,7 @@ nav a {
 
 
 .project1 {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .projectRow {
@@ -152,12 +152,12 @@ nav a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 .projectRow>* {
-    margin: 1em;
-
+    margin: 2em 1em;
 }
 
 .project-tile {
@@ -171,6 +171,7 @@ nav a {
     align-items: center;
 
     position: relative;
+
 
 }
 
@@ -198,16 +199,72 @@ nav a {
 
 }
 
-
-
 .projectText {
     padding: 1em;
     text-align: center;
+
+    position: relative;
 }
-
-
-
 
 .projectText>* {
     margin-bottom: 0.5em;
+}
+
+.projectText h3 {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--main-color);
+
+}
+
+.projectText p {
+    font-family: var(--sub-font);
+    font-size: 0.9em;
+    color: var(--sub-color);
+}
+
+.projectText a {
+    font-family: var(--sub-font);
+    font-size: 1em;
+    color: var(--third-color);
+}
+
+
+#media {
+    width: 100%;
+    background: rgba(98, 88, 119, 0.904);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+#media img {
+    position: relative;
+    z-index: 55;
+    width: 2em;
+    border-radius: 60%;
+    margin-left: 1em;
+}
+
+#media #media-bg {
+    position: absolute;
+    bottom: -10px;
+    width: 200%;
+    height: 100%;
+}
+
+
+#media h2 {
+    position: relative;
+    z-index: 55;
+    color: white;
 }
