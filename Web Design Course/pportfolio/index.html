@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="my-scrollbar">
+
+    <nav id="navbar">
+        <div class="links">
+            <a href="#projects"> Welcome! </a>
+            <a href="#projects"> Projects </a>
+        </div>
+        <h1> Web Portfolio</h1>
+        <div class="links">
+            <a href="#projects"> Media Page </a>
+            <a href="#projects"> Go to bottom </a>
+        </div>
+    </nav>
+
+
+
+    <section id="welcome-section">
+        <img id="imgWelcome" src="stylé-1.png" alt="une superbe image">
+        <h1> Welcome </h1>
+    </section>
+
+
+
+    <section id="projects">
+        <div class="project1">
+            <img id="imgProject" src="stylé2.png" alt="une superbe image">
+            <img id="imgProject2" src="stylé2.png" alt="une superbe image">
+            <div class="projectRow">
+                <div class="project-tile projectSample">
+                    <div class="projectImg">
+                        <img src="calc.png" alt="">
+                    </div>
+                    <div class="projectText">
+                        <h3> Calculator Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et officiis
+                            quod
+                            quisLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et
+                            officiis
+                            quod
+                            quis
+                            soluta saepe eligendi placeat quo quidem, voluptatibus ullam suscipit nemo?
+                        </p>
+                        <a href="#"> Check it here!</a>
+                    </div>
+                </div>
+                <div class="project-tile projectSample">
+                    <div class="projectImg">
+                        <img src="calc.png" alt="">
+                    </div>
+                    <div class="projectText">
+                        <h3> Calculator Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et officiis
+                            quod
+                            quisLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et
+                            officiis
+                            quod
+                            quis
+                            soluta saepe eligendi placeat quo quidem, voluptatibus ullam suscipit nemo?
+                        </p>
+                        <a href="#"> Check it here!</a>
+                    </div>
+                </div>
+                <div class="project-tile projectSample">
+                    <div class="projectImg">
+                        <img src="calc.png" alt="">
+                    </div>
+                    <div class="projectText">
+                        <h3> Calculator Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et officiis
+                            quod
+                            quisLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et
+                            officiis
+                            quod
+                            quis
+                            soluta saepe eligendi placeat quo quidem, voluptatibus ullam suscipit nemo?
+                        </p>
+                        <a href="#"> Check it here!</a>
+                    </div>
+                </div>
+                <div class="project-tile projectSample">
+                    <div class="projectImg">
+                        <img src="calc.png" alt="">
+                    </div>
+                    <div class="projectText">
+                        <h3> Calculator Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et officiis
+                            quod
+                            quisLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et
+                            officiis
+                            quod
+                            quis
+                            soluta saepe eligendi placeat quo quidem, voluptatibus ullam suscipit nemo?
+                        </p>
+                        <a href="#"> Check it here!</a>
+                    </div>
+                </div>
+                <div class="project-tile p5 projectSample">
+                    <div class="projectImg">
+                        <img src="calc.png" alt="">
+                    </div>
+                    <div class="projectText">
+                        <h3> Calculator Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et officiis
+                            quod
+                            quisLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor modi et
+                            officiis
+                            quod
+                            quis
+                            soluta saepe eligendi placeat quo quidem, voluptatibus ullam suscipit nemo?
+                        </p>
+                        <a href="#"> Check it here!</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="media">
+        <img id="media-bg" src="stylé2.PNG" alt="">
+        <h2> My GitHub profile</h2>
+        <a href="https://github.com/Cesarioo/" target="_blank" id="profile-link"> <img src="github.svg" alt=""></a>
+    </section>
+
+    <script>
+
+        let image1 = document.getElementById('imgWelcome')
+        let image2 = document.getElementById('imgProject')
+        let image3 = document.getElementById('imgProject2')
+
+        window.addEventListener('scroll', function () {
+            let value = scrollY
+
+            image1.style.top = value * 0.9 + 'px'
+            image2.style.left = value * 0.1 + 'px'
+            image3.style.right = value * 0.1 + 'px'
+
+        })
+
+
+    </script>
+</body>
+
+</html>
